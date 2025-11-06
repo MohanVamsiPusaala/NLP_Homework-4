@@ -1,0 +1,4 @@
+Vocab size: 24
+Max seq len: 3
+Final contextual embeddings shape: torch.Size([10, 3, 64])
+

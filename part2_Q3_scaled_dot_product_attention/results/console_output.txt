@@ -1,0 +1,65 @@
+=== Test 1: Random small inputs ===
+Q shape: (1, 3, 4), K shape: (1, 3, 4), V shape: (1, 3, 4)
+Raw scores (Q K^T):
+[[[ 0.1449  0.198   0.6501]
+  [-3.7268 -2.8491 -2.8775]
+  [ 0.3071 -0.1883  1.276 ]]]
+
+Naive softmax over raw scores (may be unstable):
+[[[0.2694 0.2841 0.4465]
+  [0.1741 0.4188 0.4071]
+  [0.2356 0.1436 0.6208]]]
+
+Scaled scores (raw / sqrt(d_k)):
+[[[ 0.0725  0.099   0.325 ]
+  [-1.8634 -1.4245 -1.4388]
+  [ 0.1536 -0.0942  0.638 ]]]
+
+Stable softmax over scaled scores:
+[[[0.3017 0.3098 0.3884]
+  [0.2451 0.3801 0.3748]
+  [0.2938 0.2293 0.4769]]]
+
+Attention output vectors (using scaled stable softmax):
+[[[ 0.1212  0.5156 -0.2394 -0.1912]
+  [ 0.0999  0.5376 -0.2558 -0.1143]
+  [ 0.1348  0.5492 -0.3327 -0.3267]]]
+
+=== Softmax stability check (manual) ===
+Manual (unstable) softmax on raw scores (numpy.exp):
+[[[0.2694 0.2841 0.4465]
+  [0.1741 0.4188 0.4071]
+  [0.2356 0.1436 0.6208]]]
+
+Manual stable softmax on raw scores (subtract row max):
+[[[0.2694 0.2841 0.4465]
+  [0.1741 0.4188 0.4071]
+  [0.2356 0.1436 0.6208]]]
+
+=== Stability Demonstration with very large values ===
+Raw large scores (Q_large K_large^T) sample:
+[[[ 1.4494e+11  1.9796e+11  6.5006e+11]
+  [-3.7268e+12 -2.8491e+12 -2.8775e+12]
+  [ 3.0715e+11 -1.8832e+11  1.2760e+12]]]
+
+Manual unstable softmax on large scores (should overflow or become NaN):
+[[[nan nan nan]
+  [nan nan nan]
+  [nan  0. nan]]]
+
+Stable softmax on large scores (torch, subtract max):
+[[[0. 0. 1.]
+  [0. 1. 0.]
+  [0. 0. 1.]]]
+
+Scaled + Stable softmax weights on large scores:
+[[[0. 0. 1.]
+  [0. 1. 0.]
+  [0. 0. 1.]]]
+
+Attention output vectors for large inputs (using scaled+stable):
+[[[ 0.1331  0.864  -1.0157 -0.8887]
+  [-0.0499  0.5263 -0.0085  0.7291]
+  [ 0.1331  0.864  -1.0157 -0.8887]]]
+
+=== End of Q3 attention test ===

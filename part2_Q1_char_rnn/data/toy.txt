@@ -1,0 +1,7 @@
+hello hello help me hello world hello hello hello help me please
+this is a tiny dataset created for the char rnn experiment
+we repeat some words and sentences so the file becomes longer
+hello world, hello again, help me with homework, help me please
+the model should now have enough characters to create sequences
+add more sentences if you want to increase the dataset size
+this is just a small example; for final training use a larger book text

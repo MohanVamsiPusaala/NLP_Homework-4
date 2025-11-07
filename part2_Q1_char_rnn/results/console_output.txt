@@ -1,0 +1,15 @@
+Epoch 1/5  Train Loss: 3.3736  Val Loss: 3.3763
+Epoch 2/5  Train Loss: 3.3017  Val Loss: 3.3304
+Epoch 3/5  Train Loss: 3.2120  Val Loss: 3.2665
+Epoch 4/5  Train Loss: 3.0608  Val Loss: 3.1897
+Epoch 5/5  Train Loss: 2.9193  Val Loss: 3.2319
+
+=== Generation at temp=0.7 ===
+hello hello help me hello worl  et ef e ee  l   ee e e e s e rl ele   ooe  eomhe  oe  e  eee e  hele  e  taoehe e e  e sso  ressl cl  eqec et eleee  lllo eleehl   e ee e  la ei e  eeees  l e  sle    eee se e  ei    me  ec e ee  eale  e ere e er so     e el l  eelel  hlu ae rl ee o,l o  o cssee  eeeih e e o   he  e le  t elrte  i
+
+=== Generation at temp=1.0 ===
+hello hello help me hello worle,s e e   jleta r t v sey euehlefer  tree  e g wwle ol sotle,so  eow geuooe,  qozzelto e tg lhd leleoeeo   mhl   ehees emehot se ewe i      i esel    e   e eel oh rs aol  eehcel  lree ee  e e e selme eele  eie wh   d  e s eew euoo  lsee m eee  hce ee d  xeo llee csot ls  leo o   ole rene e le seesg 
+
+=== Generation at temp=1.2 ===
+hello hello help me hello worltia okeso d o hoseo r eo ,mlllf e sheet iei sthltl hiemtte xr tsehe eo
+ceescdme e  eesdhk l w e zei o s   ei oeeedg  sue le  ml ;al  o l; cnspel ds  a  iesoc,ei lege un sesoe afl  rxf d t hchlp   ssiil tede  n kae elaheltl  bi eico  nele pol;ie t ue hsmollp e yt lt hs ldtwterpcp j   mem ehoblsi  s s
